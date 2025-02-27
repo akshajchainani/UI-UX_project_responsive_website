@@ -3,7 +3,7 @@
   --dark-blue-color: #023047;
   --dark-color: #070917;
   --light-color: #e8f7fb;
-  --light-blue-color: #cc00ff;
+  --light-blue-color: #a200ff;
 }
 
 *,
@@ -18,7 +18,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1134px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 
@@ -58,7 +58,7 @@ body {
 /* Header */
 
 header {
-  background: linear-gradient(180deg, #cc00ff 0%, #26308c 100%);
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
   height: 100vh;
   width: 100%;
 }
@@ -119,19 +119,21 @@ nav ul li a {
 }
 
 .hero-section .left h1 {
+  padding-top: 110px;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   font-size: 50px;
   line-height: 125%;
   margin-bottom: 0;
+  
 }
 
 .hero-section .left p {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 200%;
-  margin-bottom: 30px;
-  width: 457px;
+  margin-bottom: 50px;
+  width: 600px;
 }
 
 .hero-section .left {
@@ -148,69 +150,107 @@ nav ul li a {
 }
 
 /* Achievement Cards */
-
+/* Achievement Cards - Default (Desktop) */
 .achievement-card {
-  position: absolute;
-  min-width: 200px;
-  color: var(--dark-blue-color);
+    position: absolute;
+    min-width: 200px;
+    color: var(--dark-blue-color);
 }
 
 .achievement-card .content {
-  border-radius: 24px;
-  background: #fff;
-  padding: 8px 32px;
-  z-index: 10;
-  position: relative;
+    border-radius: 24px;
+    background: #fff;
+    padding: 8px 32px;
+    z-index: 10;
+    position: relative;
 }
 
-.achievement-card.students-enrolled {
-  left: 49%;
-  top: 270px;
+#students-enrolled {
+    left: 22%; /* Adjust as needed */
+    top: 25px; /* Adjust as needed */
 }
 
-.achievement-card.overall-rating {
-  left: 47%;
-  top: 470px;
+#overall-rating {
+    left: 10%; /* Adjust as needed */
+    top: 0px; /* Adjust as needed */
 }
 
 .achievement-card .content div {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .achievement-card h3 {
-  font-weight: bold;
-  font-size: 36px;
-  margin: 0;
-  text-align: center;
-  width: 100%;
-  flex: 1;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    flex: 1;
 }
 
 .achievement-card img {
-  flex: 1;
-  height: 42px;
-  margin-left: -24px;
+    flex: 1;
+    height: 42px;
+    margin-left: -24px;
 }
 
 .achievement-card p {
-  font-weight: normal;
-  font-size: 16px;
-  margin-top: -8px;
-  margin-bottom: 8px;
-  text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 .achievement-card .bg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(180deg, #cc00ff 0%, #3b448f 100%);
-  border-radius: 24px;
-  top: 8px;
-  left: 8px;
-  z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #a200ff 0%, #3b448f 100%);
+    border-radius: 24px;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+}
+
+/* Desktop View - Overlap with Hero Section */
+@media (min-width: 1024px) {
+    #students-enrolled {
+        left: 400%; /* Center horizontally */
+        top: -5%; /* Center vertically */
+        transform: translate(-50%, -50%); /* Center the card */
+    }
+
+    #overall-rating {
+        left: 315%; /* Adjust to overlap or position as needed */
+        top: -30%; /* Adjust to overlap or position as needed */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    #students-enrolled {
+        left: 22%; /* Adjust as needed */
+        top: 25px; /* Adjust as needed */
+    }
+
+    #overall-rating {
+        left: 10%; /* Adjust as needed */
+        top: 0px; /* Adjust as needed */
+    }
+
+    .hero-section .achievement-card {
+        position: relative;
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .hero-section .achievement-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center cards horizontally */
+    }
 }
 
 /* Testimonials Section */
@@ -335,7 +375,7 @@ section p {
 /* Courses Section */
 
 .courses-section {
-  background: linear-gradient(180deg, #cc00ff 0%, #26308c 100%);
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
   padding: 70px 0;
   padding-bottom: 120px;
 }
@@ -358,7 +398,7 @@ section p {
 .courses-section .course-card {
   background: #ffffff;
   border-radius: 24px;
-  padding: 32px 32px;
+  padding: 0px 32px;
   margin: 40px 0;
   position: relative;
 }
@@ -582,7 +622,7 @@ nav.mobile-nav,
   }
 
   .hero-section .right img {
-    height: 580px;
+    height: 600px;
   }
 
   .hero-section .achievement-card {
@@ -788,6 +828,457 @@ nav.mobile-nav,
   .hero-section .right img {
     height: 400px;
     transform: translateX(50px);
+  }
+
+  .hero-section .right {
+    overflow: hidden;
+    transform: translateX(30px);
+  }
+
+  .achievement-card h3 {
+    font-size: 30px;
+  }
+
+  .hero-section .achievement-card {
+    margin-bottom: 48px;
+  }
+
+  .hero-section .achievement-cards {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .testimonials-section .testimonial-card .info h4 {
+    font-size: 18px;
+  }
+
+  .testimonials-section .testimonial-card .info p.company {
+    font-size: 14px;
+  }
+
+  .testimonials-section .testimonial-card img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .courses-section .wrapper {
+    padding: 0;
+  }
+
+  .courses-section .course-card img {
+    height: 240px;
+  }
+
+  .courses-section .wrapper .btn {
+    right: 32px;
+  }
+
+  footer .links-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  footer form input {
+    padding: 8px 32px;
+  }
+
+  footer .links-container .links:last-child {
+    grid-column: 1 / 2;
+  }
+
+  footer ul {
+    padding: 0;
+  }
+
+  footer form .submit-btn {
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  footer .copyright {
+    margin-top: 80px;
+    text-align: center;
+  }
+}
+
+/* Mobile Navigation */
+nav.mobile-nav,
+.mobile-menu-container {
+  display: none;
+}
+
+/* Hide mobile nav and login slide container on desktop */
+@media (min-width: 801px) {
+  nav.mobile-nav,
+  .mobile-menu-container,
+  .login-slide-container {
+    display: none;
+  }
+}
+
+/* Show mobile nav and login slide container on mobile */
+@media (max-width: 800px) {
+  nav.mobile-nav,
+  .mobile-menu-container,
+  .login-slide-container {
+    display: block;
+  }
+}
+
+  .wrapper {
+    padding: 0 100px;
+  }
+
+  nav {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 36px 100px;
+  }
+
+  nav.scrolled {
+    padding: 10px 100px;
+  }
+
+  header,
+  .hero-section,
+  header .wrapper {
+    max-height: 1500px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-section .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-section .left .btn {
+    align-self: flex-start;
+  }
+
+  .hero-section .left h1 {
+    font-size: 50px;
+    line-height: 125%;
+  }
+
+  .hero-section .right {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .hero-section .right img {
+    height: 500px;
+  }
+
+  .hero-section .achievement-card {
+    position: relative;
+    margin-bottom: 80px;
+  }
+
+  .achievement-card.students-enrolled,
+  .achievement-card.overall-rating {
+    left: unset;
+    top: unset;
+  }
+
+  .hero-section .achievement-cards {
+    align-self: flex-start;
+    margin: 0px; /*changes*/
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .testimonials-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 50px;
+  }
+
+  .testimonials-section .testimonial-card {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .testimonials-section .testimonial-card:last-child::before {
+    top: -40px;
+    left: 60px;
+    height: calc(100% + 80px);
+  }
+
+  .testimonials-section .testimonial-card:last-child {
+    transform: translateX(0px);
+    margin-bottom: 0;
+  }
+
+  .testimonials-section .desktop-btn {
+    display: none;
+  }
+
+  .testimonials-section .mobile-btn {
+    display: block;
+    align-self: flex-end;
+    order: 3;
+  }
+
+  .testimonials-section .right {
+    order: 1;
+  }
+
+  .testimonials-section .left {
+    order: 2;
+  }
+
+  .testimonials-section .right p {
+    display: inline;
+  }
+
+  .testimonials-section h2 {
+    margin-bottom: 20px;
+  }
+
+  .courses-section .course-cards {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .courses-section .course-card {
+    margin: 0;
+  }
+
+  .courses-section h2 {
+    margin-bottom: 40px;
+  }
+
+  .courses-section .course-card img {
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .courses-section .course-card h3 {
+    font-size: 24px;
+  }
+
+  .courses-section .wrapper .btn {
+    right: 100px;
+  }
+
+  .courses-section .course-card:last-child {
+    margin-bottom: 50px;
+  }
+
+  footer .links-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer .links-container .links:last-child {
+    grid-column: 1 / 3;
+  }
+
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  nav.mobile-nav {
+    display: flex;
+  }
+
+  nav.mobile-nav.scrolled {
+    padding: 8px 100px;
+    background: var(--light-blue-color);
+    box-shadow: 0 9px 21px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile-menu-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    background: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: all 400ms ease;
+  }
+
+  .mobile-menu-container.active {
+    left: 0;
+  }
+
+  .mobile-menu-container .close-icon {
+    position: fixed;
+    top: 32px;
+    right: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease;
+  }
+
+  .mobile-menu-container.active .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-container ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-menu-container ul li {
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  .mobile-menu-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+
+  .login-slide-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    background: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: all 400ms ease;
+  }
+
+  .login-slide-container.active {
+    left: 0;
+  }
+
+  .login-slide-container .close-icon {
+    position: fixed;
+    top: 32px;
+    right: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease;
+  }
+
+  .login-slide-container.active .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .login-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+
+  .login-box h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--dark-blue-color);
+    margin-bottom: 20px;
+  }
+
+  .login-box .input-group {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .login-box .input-group label {
+    font-size: 14px;
+    color: var(--dark-blue-color);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .login-box .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  .login-box .btn.light {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .login-box .other-options {
+    margin-top: 20px;
+  }
+
+  .login-box .other-options p {
+    font-size: 14px;
+    color: var(--dark-blue-color);
+    margin-bottom: 12px;
+  }
+
+  .login-box .btn.social {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: var(--dark-blue-color);
+    margin-bottom: 12px;
+  }
+
+  .login-box .sign-up {
+    margin-top: 20px;
+  }
+
+  .login-box .sign-up p {
+    font-size: 14px;
+    color: var(--dark-blue-color);
+  }
+
+  .login-box .sign-up a {
+    color: var(--orange-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* Hide on Desktop */
+  @media (min-width: 900px) {
+  .login-slide-container {
+    display: none;
+    }
+}
+
+  .hero-section .left h1 {
+    font-size: 36px;
+  }
+
+  .hero-section .right img {
+    height: 400px;
+    transform: translateX(100px);
   }
 
   .hero-section .right {
