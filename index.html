@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
+    <title>UI UX Development</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,7 +46,7 @@
           </ul>
         </div>
 
-        <!-- Login Slide Container -->
+                <!-- Login Slide Container -->
         <div class="login-slide-container" id="loginSlideContainer">
           <div class="close-icon">
             <img src="images/close-icon.svg" alt="Close" />
@@ -67,11 +67,40 @@
                 <button class="btn social">Continue with Facebook</button>
               </div>
               <div class="sign-up">
-                <p>Don't have an account? <a href="#">Sign up</a></p>
+                <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Sign Up Slide Container -->
+        <div class="signup-slide-container" id="signupSlideContainer">
+          <div class="close-icon">
+            <img src="images/close-icon.svg" alt="Close" />
+          </div>
+          <div class="signup-container">
+            <div class="signup-box">
+              <h2>Sign up to start your learning journey</h2>
+              <form action="#" method="post">
+                <div class="input-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <button type="submit" class="btn light">Sign up with email</button>
+              </form>
+              <div class="other-options">
+                <p>Other sign up options</p>
+                <button class="btn social">Sign up with Google</button>
+                <button class="btn social">Sign up with Facebook</button>
+              </div>
+              <div class="login">
+                <p>Already have an account? <a href="#" id="showLogin">Log in</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
 
         <!-- Hero Section -->
         <div class="hero-section">
@@ -87,28 +116,25 @@
           <div class="right">
             <img src="images/hero-image.png" alt="Hero Image" />
           </div>
+
           <div class="achievement-cards">
-              <div id="students-enrolled" class="achievement-card students-enrolled">
-                <div class="content">
-                  <div><h3>32K</h3></div>
-                    <p>Students Enrolled</p>
-                  </div>
-                <div class="bg"></div>
+            <div id="students-enrolled" class="achievement-card students-enrolled">
+              <div class="content">
+                <div><h3>32K</h3></div>
+                <p>Students Enrolled</p>
               </div>
-              <div id="overall-rating" class="achievement-card overall-rating">
-            <div class="content">
-            <div><h3>4.7</h3><img src="images/start-icon.svg" alt="Star" /></div>
-            <p>Overall Rating</p>
-        </div>
-                  <div class="bg"></div>
-                </div>
+              <div class="bg"></div>
+            </div>
+            <div id="overall-rating" class="achievement-card overall-rating">
+              <div class="content">
+                <div><h3>4.7</h3><img src="images/start-icon.svg" alt="Star" /></div>
+                <p>Overall Rating</p>
               </div>
               <div class="bg"></div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+            </header>
 
     <!-- Testimonials Section -->
     <div class="wrapper">
@@ -152,6 +178,7 @@
     <!-- Courses Section -->
     <section class="courses-section">
       <div class="wrapper">
+
         <h2 class="light">Our Courses</h2>
         <div class="course-cards">
           <div class="course-card">
