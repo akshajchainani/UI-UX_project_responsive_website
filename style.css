@@ -1073,14 +1073,14 @@ nav.mobile-nav,
 } /* This closing brace was missing */
 
 /* 377×770 Mobile Specific Styles */
-@media (max-width: 425px) {
+@media (max-width: 400px) {
   body {
-    width: 425px;
+    width: 400px;
     overflow-x: hidden;
   }
 
   .wrapper {
-    width: 425px;
+    width: 400px;
     padding: 0 16px;
   }
 
