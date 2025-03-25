@@ -1073,20 +1073,20 @@ nav.mobile-nav,
 } /* This closing brace was missing */
 
 /* 377×770 Mobile Specific Styles */
-@media (max-width: 377px) {
+@media (max-width: 425px) {
   body {
-    width: 377px;
+    width: 425px;
     overflow-x: hidden;
   }
 
   .wrapper {
-    width: 377px;
+    width: 425px;
     padding: 0 16px;
   }
 
   /* Header */
   header {
-    height: 770px;
+    height: 760px;
     overflow: hidden;
   }
 
@@ -1101,7 +1101,7 @@ nav.mobile-nav,
 
   /* Hero Section */
   .hero-section {
-    height: 770px;
+    height: 760px;
     flex-direction: column;
     padding-top: 60px;
   }
