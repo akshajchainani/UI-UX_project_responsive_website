@@ -1141,16 +1141,12 @@ nav.mobile-nav,
     margin-top: 20px;
   }
 
-  .hero-section .right img {
-    height: 220px;
-    transform: none;
-    margin-left: -20px;
-  }
+  
 
   /* Achievement Cards */
   .hero-section .achievement-cards {
     order: 3;
-    width: 100%;
+    width: 50%;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -1167,7 +1163,7 @@ nav.mobile-nav,
   }
 
   .achievement-card .content {
-    padding: 8px 16px;
+    padding: 6px 10px;
   }
 
   .achievement-card h3 {
@@ -1176,11 +1172,18 @@ nav.mobile-nav,
 
   .achievement-card img {
     height: 30px;
-    margin-left: -16px;
+    margin-left: 16px;
   }
 
   .achievement-card p {
     font-size: 14px;
+  }
+
+  .hero-section .right img {
+    
+    height: 300px;
+    transform: none;
+    margin-left: 150px;
   }
 
   /* Hide desktop elements */
