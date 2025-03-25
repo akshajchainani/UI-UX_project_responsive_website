@@ -25,12 +25,12 @@ body {
 /* Buttons */
 
 .btn {
-  padding: 16px 32px;
+  padding: 8px 16px; /* Reduced padding to make the button smaller */
   border-radius: 24px;
   color: #fff;
   display: inline-block;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px; /* Reduced font size */
   text-decoration: none;
   position: relative;
 }
@@ -58,7 +58,7 @@ body {
 /* Header */
 
 header {
-  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  background: linear-gradient(180deg, #660071 0%, #0a0254 100%);
   height: 100vh;
   width: 100%;
 }
@@ -125,7 +125,7 @@ nav ul li a {
   font-size: 50px;
   line-height: 125%;
   margin-bottom: 0;
-
+  width: 100%;
 }
 
 .hero-section .left p {
@@ -138,6 +138,21 @@ nav ul li a {
 
 .hero-section .left {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-section .left .btn.enrol-icon {
+  width: 500px; /* Set the width to 679px */
+  height: 60px; /* Set the height to 679px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: 18px; /* Adjust font size as needed */
+  line-height: 0; /* Adjust line height for better text alignment */
 }
 
 .hero-section .right {
@@ -145,7 +160,7 @@ nav ul li a {
 }
 
 .hero-section .right img {
-  height: 200px;
+  height: 400px;
   vertical-align: middle;
 }
 
@@ -215,35 +230,6 @@ nav ul li a {
   left: 8px;
   z-index: 1;
 }
-
-/* Desktop View - Overlap with Hero Section */
-@media (min-width: 1024px) {
-  #students-enrolled {
-    left: 400%;
-    top: -5%;
-    transform: translate(-50%, -50%);
-  }
-
-  #overall-rating {
-    left: 315%;
-    top: -30%;
-  }
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-  .hero-section .achievement-card {
-    position: relative;
-    margin-bottom: 20px;
-  }
-
-  .hero-section .achievement-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 
 /* Desktop View - Overlap with Hero Section */
 @media (min-width: 1024px) {
@@ -642,7 +628,9 @@ nav.mobile-nav,
   }
 
   .hero-section .right img {
-    height: 200px;
+    
+    height: 470px;
+    transform: translateX(180px)
   }
 
   .hero-section .achievement-card {
@@ -846,13 +834,13 @@ nav.mobile-nav,
   }
 
   .hero-section .right img {
-    height: 200px;
+    height: 320px;
     transform: translateX(50px);
   }
 
   .hero-section .right {
-    overflow: hidden;
-    transform: translateX(30px);
+    overflow: 0;
+    transform: translateX(-20px);
   }
 
   .achievement-card h3 {
@@ -1057,10 +1045,6 @@ nav.mobile-nav,
   font-weight: bold;
 }
 
-
-
-
-
 /* Show on Mobile */
 
 /* Hide the sign-up container on desktop */
@@ -1077,87 +1061,13 @@ nav.mobile-nav,
   }
 }
 
-
-  .hero-section .left h1 {
-    font-size: 36px;
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .hero-section .left .btn.enrol-icon {
+    width: 100%; /* Make the button full width on smaller screens */
+    height: -10%; /* Allow the height to adjust based on content */
+    padding: 16px 32px; /* Add padding for better touch targets */
+    font-size: 18px; /* Adjust font size for smaller screens */
+    border-radius: 24px; /* Reset border radius for smaller screens */
   }
-
-  .hero-section .right img {
-    height: 200px;
-    transform: translateX(50px);
-  }
-
-  .hero-section .right {
-    overflow: hidden;
-    transform: translateX(30px);
-  }
-
-  .achievement-card h3 {
-    font-size: 30px;
-  }
-
-  .hero-section .achievement-card {
-    margin-bottom: 48px;
-  }
-
-  .hero-section .achievement-cards {
-    margin: 0;
-  }
-
-  h2 {
-    font-size: 30px;
-  }
-
-  .testimonials-section .testimonial-card .info h4 {
-    font-size: 18px;
-  }
-
-  .testimonials-section .testimonial-card .info p.company {
-    font-size: 14px;
-  }
-
-  .testimonials-section .testimonial-card img {
-    height: 100px;
-    width: 100px;
-  }
-
-  .courses-section .wrapper {
-    padding: 0;
-  }
-
-  .courses-section .course-card img {
-    height: 240px;
-  }
-
-  .courses-section .wrapper .btn {
-    right: 32px;
-  }
-
-  footer .links-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-
-  footer form input {
-    padding: 8px 32px;
-  }
-
-  footer .links-container .links:last-child {
-    grid-column: 1 / 2;
-  }
-
-  footer ul {
-    padding: 0;
-  }
-
-  footer form .submit-btn {
-    top: 130%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  footer .copyright {
-    margin-top: 80px;
-    text-align: center;
-  }
+}
