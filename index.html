@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI UX Development</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@300;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -23,6 +23,7 @@
             <li><a href="#">Services</a></li>
             <li><a href="#">Our Work</a></li>
             <li><a href="#" class="btn dark enrol-now">Enrol Now</a></li>
+            <li class="auth-state" style="display:none;"></li>
           </ul>
         </nav>
 
@@ -43,10 +44,11 @@
             <li><a href="#">Services</a></li>
             <li><a href="#">Our Work</a></li>
             <li><a href="#" id="loginButton" class="btn dark">Login</a></li>
+            <li class="auth-state" style="display:none;"></li>
           </ul>
         </div>
 
-                <!-- Login Slide Container -->
+        <!-- Login Slide Container -->
         <div class="login-slide-container" id="loginSlideContainer">
           <div class="close-icon">
             <img src="images/close-icon.svg" alt="Close" />
@@ -63,7 +65,7 @@
               </form>
               <div class="other-options">
                 <p>Other log in options</p>
-                <button class="btn social">Continue with Google</button>
+                <button class="btn social google">Continue with Google</button>
                 <button class="btn social">Continue with Facebook</button>
               </div>
               <div class="sign-up">
@@ -90,7 +92,7 @@
               </form>
               <div class="other-options">
                 <p>Other sign up options</p>
-                <button class="btn social">Sign up with Google</button>
+                <button class="btn social google">Sign up with Google</button>
                 <button class="btn social">Sign up with Facebook</button>
               </div>
               <div class="login">
@@ -99,8 +101,6 @@
             </div>
           </div>
         </div>
-
-        
 
         <!-- Hero Section -->
         <div class="hero-section">
@@ -134,7 +134,8 @@
             </div>
           </div>
         </div>
-            </header>
+      </div>
+    </header>
 
     <!-- Testimonials Section -->
         <div class="wrapper">
