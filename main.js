@@ -55,6 +55,14 @@ const enrolButtons = document.querySelectorAll(".enrol-now, .enrol-icon");
 const learnMoreButtons = document.querySelectorAll(".desktop-btn, .mobile-btn");
 const allCoursesBtn = document.querySelector(".courses-section .btn");
 
+// DOM Selectors for Desktop Popups
+const desktopLoginPopup = document.getElementById("desktopLoginPopup");
+const desktopSignupPopup = document.getElementById("desktopSignupPopup");
+const desktopShowSignup = document.getElementById("desktopShowSignup");
+const desktopShowLogin = document.getElementById("desktopShowLogin");
+const desktopCloseButtons = document.querySelectorAll(".desktop-login-popup .close-icon, .desktop-signup-popup .close-icon");
+const desktopOverlays = document.querySelectorAll(".desktop-login-popup .popup-overlay, .desktop-signup-popup .popup-overlay");
+
 // Helper Functions
 function isMobileView() {
   return window.matchMedia("(max-width: 800px)").matches;
@@ -164,6 +172,12 @@ function handleLogout() {
   }
 }
 
+// Function to close desktop popups
+function closeDesktopPopups() {
+  desktopLoginPopup.classList.remove("active");
+  desktopSignupPopup.classList.remove("active");
+}
+
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
   // Scroll Event Listener
@@ -200,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isMobileView()) {
         addClass(loginSlideContainer, "active");
       } else {
-        window.location.href = "login.html";
+        desktopLoginPopup.classList.add("active");
       }
     });
   }
@@ -223,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isMobileView()) {
           addClass(signupSlideContainer, "active");
         } else {
-          window.location.href = "enrol.html";
+          desktopSignupPopup.classList.add("active");
         }
       });
     });
@@ -315,4 +329,39 @@ document.addEventListener('DOMContentLoaded', () => {
       updateUIAfterLogin(user);
     });
   }
+
+  // Desktop close buttons
+  desktopCloseButtons.forEach(button => {
+    button.addEventListener("click", closeDesktopPopups);
+  });
+
+  // Desktop overlays
+  desktopOverlays.forEach(overlay => {
+    overlay.addEventListener("click", closeDesktopPopups);
+  });
+
+  // Desktop signup link in login popup
+  if (desktopShowSignup) {
+    desktopShowSignup.addEventListener("click", (e) => {
+      e.preventDefault();
+      desktopLoginPopup.classList.remove("active");
+      desktopSignupPopup.classList.add("active");
+    });
+  }
+
+  // Desktop login link in signup popup
+  if (desktopShowLogin) {
+    desktopShowLogin.addEventListener("click", (e) => {
+      e.preventDefault();
+      desktopSignupPopup.classList.remove("active");
+      desktopLoginPopup.classList.add("active");
+    });
+  }
+
+  // Close desktop popups on escape key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeDesktopPopups();
+    }
+  });
 });

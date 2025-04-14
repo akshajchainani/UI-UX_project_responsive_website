@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - DevelopperRack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <!-- Desktop Navigation -->
+        <nav>
+          <a href="index.html">
+            <div class="logo">DeveloperRack.</div>
+          </a>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="#" class="btn dark enrol-now">Enrol Now</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+          <a href="index.html">
+            <div class="logo">DeveloperRack.</div>
+          </a>
+          <div class="menu-icon">
+            <img src="images/menu-icon.svg" alt="Menu" />
+          </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu-container">
+          <div class="close-icon">
+            <img src="images/close-icon.svg" alt="Close" />
+          </div>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="#" class="btn dark">Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section about-hero">
+          <div class="left about-hero-content">
+            <h1>About DevelopperRack</h1>
+            <p>Empowering aspiring developers with world-class education and industry expertise since 2018.</p>
+            <a href="#" class="btn light">Join Our Community</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="wrapper">
+      <section class="mission-section">
+        <h2>Our Mission</h2>
+        <p>To revolutionize tech education by providing accessible, high-quality training that bridges the gap between passion and professional success. We're committed to nurturing the next generation of developers through practical, industry-focused learning experiences.</p>
+      </section>
+
+      <section class="values-section">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <img src="images/start-icon.svg" alt="Excellence Icon">
+            </div>
+            <h3>Excellence</h3>
+            <p>We maintain the highest standards in tech education, ensuring our students receive industry-relevant training.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <img src="images/start-icon.svg" alt="Innovation Icon">
+            </div>
+            <h3>Innovation</h3>
+            <p>We continuously evolve our curriculum to incorporate the latest technologies and development methodologies.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">
+              <img src="images/start-icon.svg" alt="Community Icon">
+            </div>
+            <h3>Community</h3>
+            <p>We foster a vibrant community where developers can connect, collaborate, and grow together.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="stat-card">
+          <h3>6+</h3>
+          <p>Years in Tech Education</p>
+        </div>
+        <div class="stat-card">
+          <h3>75+</h3>
+          <p>Industry Expert Instructors</p>
+        </div>
+        <div class="stat-card">
+          <h3>150+</h3>
+          <p>Development Courses</p>
+        </div>
+        <div class="stat-card">
+          <h3>92%</h3>
+          <p>Career Success Rate</p>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <h2>Our Leadership Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="images/testimonial-1.png" alt="Team Member">
+            <h3>David Chen</h3>
+            <p class="position">Founder & CEO</p>
+            <p class="bio">Former tech lead with 15+ years of experience in software development and education.</p>
+          </div>
+          <div class="team-member">
+            <img src="images/testimonial-2.png" alt="Team Member">
+            <h3>Lisa Rodriguez</h3>
+            <p class="position">Head of Education</p>
+            <p class="bio">Tech educator with a passion for creating accessible learning experiences.</p>
+          </div>
+          <div class="team-member">
+            <img src="images/testimonial-1.png" alt="Team Member">
+            <h3>Michael Park</h3>
+            <p class="position">Technical Director</p>
+            <p class="bio">Expert in software architecture and technical education.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <h2>Ready to Start Your Tech Journey?</h2>
+        <p>Join thousands of successful developers who transformed their passion into a career with us.</p>
+        <a href="#" class="btn light">Begin Your Development Career</a>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="wrapper">
+        <div class="links-container">
+          <div class="links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms & Conditions</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h3>Course Links</h3>
+            <ul>
+              <li><a href="#">Game Design</a></li>
+              <li><a href="#">Unity Development</a></li>
+              <li><a href="#">Unreal Engine</a></li>
+              <li><a href="#" id="footerLogin">Log In</a></li>
+              <li><a href="#" class="enrol-now">Enrol Now</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h3>Stay Connected</h3>
+            <div class="social">
+              <a href="#"><img src="images/facebook-logo.svg" alt="Facebook"></a>
+              <a href="#"><img src="images/instagram-logo.svg" alt="Instagram"></a>
+            </div>
+            <form>
+              <input type="text" placeholder="Email Address">
+              <button class="submit-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <p class="copyright">&copy; 2024 DevelopperRack. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Desktop Login Popup -->
+    <div class="desktop-login-popup" id="desktopLoginPopup">
+      <div class="popup-overlay"></div>
+      <div class="popup-content">
+        <div class="close-icon">
+          <img src="images/close-icon.svg" alt="Close" />
+        </div>
+        <div class="login-box">
+          <h2>Log in to continue your learning journey</h2>
+          <form action="#" method="post">
+            <div class="input-group">
+              <label for="desktop-email">Email</label>
+              <input type="email" id="desktop-email" name="email" required />
+            </div>
+            <button type="submit" class="btn light">Continue with email</button>
+          </form>
+          <div class="other-options">
+            <p>Other log in options</p>
+            <button class="btn social google">Continue with Google</button>
+            <button class="btn social">Continue with Facebook</button>
+          </div>
+          <div class="sign-up">
+            <p>Don't have an account? <a href="#" id="desktopShowSignup">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop Signup Popup -->
+    <div class="desktop-signup-popup" id="desktopSignupPopup">
+      <div class="popup-overlay"></div>
+      <div class="popup-content">
+        <div class="close-icon">
+          <img src="images/close-icon.svg" alt="Close" />
+        </div>
+        <div class="signup-box">
+          <h2>Sign up to start your learning journey</h2>
+          <form action="#" method="post">
+            <div class="input-group">
+              <label for="desktop-signup-email">Email</label>
+              <input type="email" id="desktop-signup-email" name="email" required />
+            </div>
+            <button type="submit" class="btn light">Sign up with email</button>
+          </form>
+          <div class="other-options">
+            <p>Other sign up options</p>
+            <button class="btn social google">Sign up with Google</button>
+            <button class="btn social">Sign up with Facebook</button>
+          </div>
+          <div class="login">
+            <p>Already have an account? <a href="#" id="desktopShowLogin">Log in</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="scroll.js"></script>
+  </body>
+</html> 

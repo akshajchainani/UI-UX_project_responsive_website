@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Work - DeveloperRack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <!-- Desktop Navigation -->
+        <nav>
+          <a href="index.html">
+            <div class="logo">DeveloperRack.</div>
+          </a>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="#" class="btn dark enrol-now">Enrol Now</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav">
+          <a href="index.html">
+            <div class="logo">DeveloperRack.</div>
+          </a>
+          <div class="menu-icon">
+            <img src="images/menu-icon.svg" alt="Menu" />
+          </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu-container">
+          <div class="close-icon">
+            <img src="images/close-icon.svg" alt="Close" />
+          </div>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="#" id="loginButton" class="btn dark">Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-section about-hero">
+          <div class="left about-hero-content">
+            <h1>Our Development Portfolio</h1>
+            <p>Discover the incredible projects and success stories from our students and alumni.</p>
+            <a href="#" class="btn light">View Our Projects</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+      <!-- Featured Projects -->
+      <section class="values-section">
+        <div class="about-content">
+          <h2>Featured Projects</h2>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">
+                <img src="" alt="Web Application">
+              </div>
+              <h3>E-Commerce Platform</h3>
+              <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB by our 2023 graduating class.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <img src="" alt="UI/UX Design">
+              </div>
+              <h3>FinTech Dashboard</h3>
+              <p>An award-winning financial dashboard showcasing advanced UI/UX design principles and data visualization.</p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">
+                <img src="" alt="System Design">
+              </div>
+              <h3>Cloud Infrastructure</h3>
+              <p>A scalable cloud architecture project demonstrating advanced system design and microservices implementation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Success Stories -->
+      <section class="why-choose-section">
+        <h2>Success Stories</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <h3>Alex Thompson</h3>
+            <p>"Started as a beginner, now leading a team at a major tech company. The hands-on training was invaluable."</p>
+          </div>
+          <div class="feature">
+            <h3>Maria Garcia</h3>
+            <p>"Launched my tech startup and secured funding for our first product within a year of graduation."</p>
+          </div>
+          <div class="feature">
+            <h3>James Wilson</h3>
+            <p>"Transitioned from non-tech background to software development and now working at a FAANG company."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievement Stats -->
+      <section class="stats-section">
+        <div class="stat-card">
+          <h3>100+</h3>
+          <p>Published Games</p>
+        </div>
+        <div class="stat-card">
+          <h3>85%</h3>
+          <p>Employment Rate</p>
+        </div>
+        <div class="stat-card">
+          <h3>50M+</h3>
+          <p>Total Downloads</p>
+        </div>
+      </section>
+
+      <!-- Student Showcase -->
+      <section class="team-section">
+        <h2>Student Showcase</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="images/testimonial-1.png" alt="Student Project">
+            <h3>TaskMaster Pro</h3>
+            <p class="position">Productivity App</p>
+            <p class="bio">A feature-rich task management application with AI-powered scheduling and analytics.</p>
+          </div>
+          <div class="team-member">
+            <img src="images/testimonial-2.png" alt="Student Project">
+            <h3>HealthTrack</h3>
+            <p class="position">Health & Fitness App</p>
+            <p class="bio">A comprehensive health tracking platform with real-time analytics and personalized insights.</p>
+          </div>
+          <div class="team-member">
+            <img src="images/testimonial-1.png" alt="Student Project">
+            <h3>CodeCollab</h3>
+            <p class="position">Developer Tool</p>
+            <p class="bio">An innovative collaboration platform for developers with real-time code sharing and review.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <h2>Create Your Tech Legacy</h2>
+        <p>Join our community of successful developers and bring your innovative ideas to life.</p>
+        <a href="#" class="btn light">Start Building Projects</a>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="wrapper">
+          <div class="links-container">
+            <div class="links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+              </ul>
+            </div>
+            <div class="links">
+              <h3>Course Links</h3>
+              <ul>
+                <li><a href="#" id="footerLogin">Log In</a></li>
+                <li><a href="courses.html">Browse Courses</a></li>
+                <li><a href="#" class="enrol-now">Enrol Now</a></li>
+              </ul>
+            </div>
+            <div class="links">
+              <h3>Stay Connected</h3>
+              <div class="social">
+                <a href="#"><img src="images/facebook-logo.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/instagram-logo.svg" alt="Instagram"></a>
+              </div>
+              <form>
+                <input type="text" placeholder="Email Address">
+                <button class="submit-btn">Subscribe</button>
+              </form>
+            </div>
+          </div>
+          <p class="copyright">© 2024 DeveloperRack. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Desktop Login Popup -->
+    <div class="desktop-login-popup" id="desktopLoginPopup">
+      <div class="popup-overlay"></div>
+      <div class="popup-content">
+        <div class="close-icon">
+          <img src="images/close-icon.svg" alt="Close" />
+        </div>
+        <div class="login-box">
+          <h2>Log in to continue your learning journey</h2>
+          <form action="#" method="post">
+            <div class="input-group">
+              <label for="desktop-email">Email</label>
+              <input type="email" id="desktop-email" name="email" required />
+            </div>
+            <button type="submit" class="btn light">Continue with email</button>
+          </form>
+          <div class="other-options">
+            <p>Other log in options</p>
+            <button class="btn social google">Continue with Google</button>
+            <button class="btn social">Continue with Facebook</button>
+          </div>
+          <div class="sign-up">
+            <p>Don't have an account? <a href="#" id="desktopShowSignup">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop Signup Popup -->
+    <div class="desktop-signup-popup" id="desktopSignupPopup">
+      <div class="popup-overlay"></div>
+      <div class="popup-content">
+        <div class="close-icon">
+          <img src="images/close-icon.svg" alt="Close" />
+        </div>
+        <div class="signup-box">
+          <h2>Sign up to start your learning journey</h2>
+          <form action="#" method="post">
+            <div class="input-group">
+              <label for="desktop-signup-email">Email</label>
+              <input type="email" id="desktop-signup-email" name="email" required />
+            </div>
+            <button type="submit" class="btn light">Sign up with email</button>
+          </form>
+          <div class="other-options">
+            <p>Other sign up options</p>
+            <button class="btn social google">Sign up with Google</button>
+            <button class="btn social">Sign up with Facebook</button>
+          </div>
+          <div class="login">
+            <p>Already have an account? <a href="#" id="desktopShowLogin">Log in</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="scroll.js"></script>
+  </body>
+</html> 
