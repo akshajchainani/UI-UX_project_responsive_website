@@ -2885,3 +2885,267 @@ nav.mobile-nav,
     height: 16px;
   }
 }
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Apply Animations */
+.hero-section h1 {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.hero-section p {
+  animation: fadeInLeft 0.8s ease-out 0.2s backwards;
+}
+
+.hero-section .btn {
+  animation: fadeInLeft 0.8s ease-out 0.4s backwards;
+}
+
+.hero-section .right img {
+  animation: fadeInRight 0.8s ease-out 0.2s backwards;
+}
+
+.achievement-cards .achievement-card {
+  animation: scaleIn 0.6s ease-out backwards;
+}
+
+.achievement-cards .students-enrolled {
+  animation-delay: 0.2s;
+}
+
+.achievement-cards .overall-rating {
+  animation-delay: 0.4s;
+}
+
+/* Services & Features Animations */
+.values-grid .value-card {
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.values-grid .value-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.values-grid .value-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.values-grid .value-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.features-grid .feature {
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.features-grid .feature:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.features-grid .feature:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.features-grid .feature:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+/* Course Cards Animation */
+.course-cards .course-card {
+  animation: scaleIn 0.6s ease-out backwards;
+}
+
+.course-cards .course-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.course-cards .course-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.course-cards .course-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Stats Section Animation */
+.stats-section .stat-card {
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.stats-section .stat-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.stats-section .stat-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.stats-section .stat-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Team Section Animation */
+.team-grid .team-member {
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.team-grid .team-member:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.team-grid .team-member:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.team-grid .team-member:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Interactive Animations */
+.btn:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* Popup Animations */
+.desktop-login-popup .popup-content,
+.desktop-signup-popup .popup-content {
+  animation: scaleIn 0.3s ease-out;
+}
+
+.popup-overlay {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scroll Animation */
+.scrolled {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Menu Animation */
+.mobile-menu-container.active {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Floating Animation for Icons */
+.value-icon img,
+.feature img {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Add smooth scrolling to the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Add animation for elements that come into view while scrolling */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
