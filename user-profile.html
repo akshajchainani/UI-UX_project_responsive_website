@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>User Profile - DevelopperRack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="smile.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">DevelopperRack</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="our-work.html">Our Work</a></li>
+                <li><a href="courses.html">Courses</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn light" id="logoutBtn">Log Out</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-section">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <h1>Welcome to Your Learning Journey!</h1>
+                    <p>Start exploring our courses and enhance your game development skills.</p>
+                </div>
+                <div class="profile-actions">
+                    <a href="courses.html" class="btn enrol-now">
+                        <span>Browse Courses</span>
+                        <img src="images/enrol-now-icon.svg" alt="Enrol Now">
+                    </a>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-card">
+                        <h3>0</h3>
+                        <p>Courses Enrolled</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>0</h3>
+                        <p>Courses Completed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>0</h3>
+                        <p>Certificates Earned</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Courses</h3>
+                <ul>
+                    <li><a href="courses.html">Browse Courses</a></li>
+                    <li><a href="#" id="footerLogin">Log In</a></li>
+                    <li><a href="#" class="enrol-now">Enrol Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><img src="images/facebook-logo.svg" alt="Facebook"></a>
+                    <a href="#"><img src="images/instagram-logo.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DevelopperRack. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scroll.js"></script>
+    <script>
+        // Handle logout
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            // Clear any stored user data
+            localStorage.removeItem('userLoggedIn');
+            // Redirect to home page
+            window.location.href = 'index.html';
+        });
+
+        // Check if user is logged in
+        if (!localStorage.getItem('userLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html> 

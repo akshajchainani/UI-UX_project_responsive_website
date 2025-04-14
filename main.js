@@ -107,6 +107,7 @@ async function handleGoogleLogin() {
     console.log("Logged in user:", user);
     closeAllModals();
     updateUIAfterLogin(user);
+    window.location.href = "user-profile.html";
     
   } catch (error) {
     console.error("Google sign-in error:", error);
@@ -131,6 +132,14 @@ async function handleGoogleLogin() {
     
     alert(errorMessage);
   }
+}
+
+// Function to handle email login/signup
+function handleEmailAuth(event) {
+  event.preventDefault();
+  closeAllModals();
+  closeDesktopPopups();
+  window.location.href = "user-profile.html";
 }
 
 // Enhanced UI Update Function
@@ -228,6 +237,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Email Login/Signup Buttons
+  document.querySelectorAll('.login-box form button[type="submit"], .signup-box form button[type="submit"]').forEach(button => {
+    button.addEventListener("click", handleEmailAuth);
+  });
 
   // Enrol Buttons
   if (enrolButtons) {
