@@ -1534,12 +1534,13 @@ nav.mobile-nav,
 }
 
 .about-hero h1 {
+  color: white;
   margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 48px;
   background: linear-gradient(to right, var(--orange-color), var(--light-blue-color));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: white;
   background-clip: text;
 }
 
@@ -1590,7 +1591,7 @@ nav.mobile-nav,
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   background: linear-gradient(to right, #fff, var(--orange-color));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: white;
   background-clip: text;
 }
 
@@ -1613,7 +1614,7 @@ nav.mobile-nav,
   margin-bottom: 40px;
   background: linear-gradient(to right, var(--orange-color), var(--light-blue-color));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: black;
   background-clip: text;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -1645,14 +1646,14 @@ nav.mobile-nav,
 }
 
 .value-card h3 {
-  color: var(--orange-color);
+  color: white;
   margin-bottom: 15px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   font-size: 24px;
   background: linear-gradient(to right, #fff, var(--orange-color));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-text-fill-color: white;
+  background-clip: none;
 }
 
 .value-card p {
@@ -1789,9 +1790,9 @@ nav.mobile-nav,
 }
 
 .team-member h3 {
-  background: linear-gradient(to right, var(--orange-color), var(--light-blue-color));
+  background: white;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: white;
   background-clip: text;
   margin: 15px 0 5px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
